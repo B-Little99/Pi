@@ -4,15 +4,17 @@ let pi = "3.14159265358979323846264338327950288419716939937510582097494459230781
 // let button = document.querySelector("button");
 // let outputBox = document.getElementById("finalResult");
 
-let n = document.getElementById("Data");
+
 let small = "The number is too small";
 let big = "The number is too large";
 
 
-function Pi (n) {
-    x = (n + 2);
+function Pi () {
+    let n = document.getElementById("Data").value;
+    n = parseInt(n);
+    let x = (n + 2);
     if (n > 0 && n <=100) {
-        return pi.slice(0, x);
+        document.getElementById("finalResult").innerHTML = pi.slice(0, x);
     } else if (n > 100) {
         document.getElementById("finalResult").innerHTML = big;
     } else {
