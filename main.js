@@ -1,4 +1,4 @@
-let pi = 3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679; 
+let pi = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679"; 
 
 
 // let button = document.querySelector("button");
@@ -11,7 +11,7 @@ let big = "The number is too large";
 
 function Pi (n) {
     x = (n + 2);
-    if (n > 0) {
+    if (n > 0 && n <=100) {
         return pi.slice(0, x);
     } else if (n > 100) {
         document.getElementById("finalResult").innerHTML = big;
