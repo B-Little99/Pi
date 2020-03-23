@@ -6,6 +6,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="main.css">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Da+2&display=swap" rel="stylesheet">
         <title>PI to the Nth Digit</title>
     </head>
     <body>
@@ -14,14 +15,15 @@
         <br>
         <form onsubmit="return false">
             <label for = "introText" >Calculate PI up to your desired decimal place</label>
-
+            
             <input id = "Data" type = "number" required placeholder="e.g. 5">
+            
+            <div id = "buttonContainer">
+                <button id = "button" type = "submit" onclick="Pi()"> Calculate </button>
+                <input id = "button" type = "reset" onclick="reset1()">
+            </div>
 
-            <button type = "submit" onclick="Pi()"> Calculate </button>
-
-            <input type = "reset">
-
-            <label for = "outroText">Please note: this calculation only goes up to 100 decimal places.</label>
+            <label for = "outroText">Please note: this calculation only goes up to 80 decimal places.</label>
 
         </form>
 

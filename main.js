@@ -1,71 +1,31 @@
-let pi = "3.1415926535897932384626433832795028841971693993751058209749445923078164062862089986280348253421170679"; 
-
-
-// let button = document.querySelector("button");
-// let outputBox = document.getElementById("finalResult");
-
-
+let pi = "3.14159265358979323846264338327950288419716939937510582097494459230781640628620899"; 
 let small = "The number is too small";
 let big = "The number is too large";
 
+/*This function gets the inpute value from the "Data" ID and then uses that value to determine if the number is within the boundaries 0 - 80 to output one of three options.
 
-function Pi () {
+Creating variable 'x' lets me account for always requiring the '3.' from the string. */
+
+function Pi () { 
     let n = document.getElementById("Data").value;
     n = parseInt(n);
     let x = (n + 2);
-    if (n > 0 && n <=100) {
+    if (n > 0 && n <=80) {
         document.getElementById("finalResult").innerHTML = pi.slice(0, x);
-    } else if (n > 100) {
+    } else if (n > 80) {
         document.getElementById("finalResult").innerHTML = big;
     } else {
         document.getElementById("finalResult").innerHTML = small;
     }
 }
 
+function reset1 () {
+    location.reload(true);
+}
+/* 
+At first for the reset function I tried to rewrite the HTML P element to an empty string (which did not work).
 
-//button.onclick = function piResult();
+After research I tried to remove the child element using 'parentNode' and 'parentChild' which worked, but produced another problem that I could not then do more than one calculation.
 
-
-// function piResult () {
-//     return returnPi(n);
-// }
-
-// function returnPi(n) {     
-//     if (n > 0) { 
-//             return outputBox.innerHTML = pi.toPrecision(n); 
-//                 //.toFixed will mean that the variable "pi" will be shown to N decimal places after 3.
-//         } else if (n > 100) { 
-//             return outputBox.innerHTML = "Your number is too large";
-//         } else { 
-//             return outputBox.innerHTML = "Your number is too small";
-//         }
-//     }
-
-// function returnPi(n) {
-//     if (n > 0) {
-//         return pi.toFixed(n); 
-//             //.toFixed will mean that the variable "pi" will be shown to N decimal places after 3.
-//     } else if (n > 100) { 
-//         return "Your number is too large";
-//     } else { 
-//         return "Your number is too small";
-//     }
-// }
-
-
-
-
-// function calcPi(){
-//     return document.getElementById("Calculate").addEventListener("click", function returnPi(){})
-// }
-
-// function returnPi(n) {
-//     if (n > 0) {
-//         return document.getElementById("finalResult").innerHTML = pi.toFixed(n); 
-//         //.toFixed will mean that the variable "pi" will be shown to N decimal places after 3.
-//     } else if (n > 100) { 
-//         return document.getElementById("finalResult").innerHTML = "Your number is too large";
-//     } else { 
-//         return document.getElementById("finalResult").innerHTML = "Your number is too small";
-//     }
-// }
+Further research into refreshing the web page ultimately gave me the desired result.
+*/
